@@ -1,16 +1,17 @@
+import Navbar from "./section/Navbar";
 
-import './App.css'
 
 function App() {
- 
-
   return (
-    <>
-     <h1 className="text-3xl font-bold underline bg-red-50">
-    Hello world! From Prakriti 
-  </h1>
-    </>
-  )
+    <main className="  mx-auto bg-gray-900">
+     
+     <Navbar />
+    </main>
+   
+    
+  );
+
 }
 
-export default App
+export default App;
+
