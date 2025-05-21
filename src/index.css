@@ -11,12 +11,60 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
+@theme{
+   
+      fontFamily: {
+        generalsans: ['General Sans', 'sans-serif'],
+      },
+      colors: {
+        black: {
+          DEFAULT: '#000',
+          100: '#010103',
+          200: '#0E0E10',
+          300: '#1C1C21',
+          500: '#3A3A49',
+          600: '#1A1A1A',
+        },
+        white: {
+          DEFAULT: '#FFFFFF',
+          800: '#E4E4E6',
+          700: '#D6D9E9',
+          600: '#AFB0B6',
+          500: '#62646C',
+        },
+      },
+      backgroundImage: {
+        terminal: "url('/assets/terminal.png')",
+      },
+}
+
 @layer utilities
 {
     .c-space {
-    @apply sm:px-10 px-5;
+    @apply sm:px-10 px-5 ;
   }
   .no-outline {
   @apply focus:outline-none;
 }
+
+  .nav-ul {
+  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20 ;
+}
+
+
+  .nav-li {
+    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+  }
+
+  .nav-li_a {
+    @apply text-lg md:text-base hover:text-white transition-colors;
+  }
+
+  .nav-sidebar {
+    @apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+  }
+    .head-text {
+    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+  }
+
 }
