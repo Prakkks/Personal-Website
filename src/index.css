@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/general-sans');
 @import "tailwindcss";
-
+@import 'tailwindcss/utilities';
 
 * {
   scroll-behavior: smooth;
@@ -11,32 +11,27 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
-@theme{
-   
-      fontFamily: {
-        generalsans: ['General Sans', 'sans-serif'],
-      },
-      colors: {
-        black: {
-          DEFAULT: '#000',
-          100: '#010103',
-          200: '#0E0E10',
-          300: '#1C1C21',
-          500: '#3A3A49',
-          600: '#1A1A1A',
-        },
-        white: {
-          DEFAULT: '#FFFFFF',
-          800: '#E4E4E6',
-          700: '#D6D9E9',
-          600: '#AFB0B6',
-          500: '#62646C',
-        },
-      },
-      backgroundImage: {
-        terminal: "url('/assets/terminal.png')",
-      },
+@theme
+{
+  --color-black-default: #000;
+  --color-black-100: #010103;
+  --color-black-200: #0E0E10;
+  --color-black-300: #1C1C21;
+  --color-black-500: #3A3A49;
+  --color-black-600: #1A1A1A;
+
+  --color-white-default: #FFFFFF;
+  --color-white-800: #E4E4E6;
+  --color-white-700: #D6D9E9;
+  --color-white-600: #AFB0B6;
+  --color-white-500: #62646C;
+  
+  /* Example font family as CSS variable */
+  --font-generalsans: 'General Sans', sans-serif;
+
 }
+
+
 
 @layer utilities
 {
@@ -63,8 +58,10 @@ body {
   .nav-sidebar {
     @apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
   }
-    .head-text {
-    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+  .text-gray_gradient {
+    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
+   
+   
 
-}
+} 
