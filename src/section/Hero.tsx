@@ -8,6 +8,7 @@ import { calculateSizes } from "../Constants"
 import Target from "../Components/Target"
 import ReactLogo from "../Components/ReactLogo"
 import Cube from "../Components/cube"
+import HeroCamera from "../Components/HeroCamera"
 
 
 const Hero = () => {
@@ -42,11 +43,13 @@ const sizes = calculateSizes(isSmall,isMobile,isTablet);
                 <Suspense fallback={<CanvasLoader />}>
 
                 <PerspectiveCamera  makeDefault position={[0,0,30]}/>
-                <HackerRoom 
+               <HeroCamera>
+                 <HackerRoom 
                 scale = {sizes.deskScale} 
                 position = {sizes.deskPosition} 
                 rotation = { [0,Math.PI,0]} 
                 />
+               </HeroCamera>
                 <group>
                   <Target position={sizes.targetPosition} />
                   <ReactLogo position= {sizes.reactLogoPosition}/>
