@@ -6,6 +6,9 @@ import CanvasLoader from "../Components/CanvasLoader"
 import { Leva, useControls } from "leva"
 import { calculateSizes } from "../Constants"
 import Target from "../Components/Target"
+import ReactLogo from "../Components/ReactLogo"
+import Cube from "../Components/cube"
+
 
 const Hero = () => {
   
@@ -45,7 +48,10 @@ const sizes = calculateSizes(isSmall,isMobile,isTablet);
                 rotation = { [0,Math.PI,0]} 
                 />
                 <group>
-                  <Target position={sizes.targetPosition}   />
+                  <Target position={sizes.targetPosition} />
+                  <ReactLogo position= {sizes.reactLogoPosition}/>
+                  <Cube position={sizes.cubePosition} />
+                  
                 </group>
                 <ambientLight intensity={1} />
                 <directionalLight position={[10,10,10]} intensity={0.5}/>

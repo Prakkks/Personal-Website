@@ -1,8 +1,8 @@
+// Target.tsx
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import {  useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useRef, type JSX } from "react";
-
 import { Group } from "three";
 
 const Target = (props: JSX.IntrinsicElements['group']) => {
@@ -10,7 +10,7 @@ const Target = (props: JSX.IntrinsicElements['group']) => {
 
   const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf');
 
-    useGSAP(() => {
+  useGSAP(() => {
     if (!targetRef.current) return;
 
     gsap.to(targetRef.current.position, {
@@ -20,11 +20,10 @@ const Target = (props: JSX.IntrinsicElements['group']) => {
       yoyo: true,
       ease: "power1.inOut"
     });
-  }, []); // Optional dependency array
-
+  }, []);
 
   return (
-    <group {...props} ref={targetRef}>
+    <group {...props} ref={targetRef} rotation={[0, Math.PI / 5, 0]}>
       <primitive object={scene} />
     </group>
   );
