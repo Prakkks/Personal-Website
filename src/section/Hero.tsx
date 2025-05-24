@@ -4,10 +4,11 @@ import HackerRoom from "../Components/HackerRoom"
 import { Suspense } from "react"
 import CanvasLoader from "../Components/CanvasLoader"
 import { Leva, useControls } from "leva"
-import MediaQuery from "react-responsive"
 import { calculateSizes } from "../Constants"
+import Target from "../Components/Target"
 
 const Hero = () => {
+  
 //   const controls = useControls('HackerRoom', {
 //   positionX: { value: 2.5, min: -10, max: 10 },
 //   positionY: { value: 2.5, min: -10, max: 10 },
@@ -17,9 +18,7 @@ const Hero = () => {
 //   rotationZ: { value: 2.5, min: -10, max: 10 },
 //   scale: { value: 2.5, min: -10, max: 10 },
 // });
-// const isSmall = MediaQuery({maxWidth:480});
-// const isMobile = MediaQuery({maxWidth:768});
-// const isTablet = MediaQuery({minWidth:768, maxWidth: 1024});
+
 const width = window.innerWidth;
 const isSmall = width <= 480;
 const isMobile = width > 480 && width <= 768;
@@ -41,16 +40,13 @@ const sizes = calculateSizes(isSmall,isMobile,isTablet);
 
                 <PerspectiveCamera  makeDefault position={[0,0,30]}/>
                 <HackerRoom 
-                // scale={0.07}
-                // scale = { [-0.1, -0.1, -0.1]} 
-                // position = { [-0.4,-9.1, -3.5]} 
-                // rotation = { [-2.9, 3.1, -6.3]} 
-                 scale = {sizes.deskScale} 
+                scale = {sizes.deskScale} 
                 position = {sizes.deskPosition} 
                 rotation = { [0,Math.PI,0]} 
-                // position={[0,0,0]}
-                  // rotation={[0, -Math.PI /2, 0]} 
-                  />
+                />
+                <group>
+                  <Target position={sizes.targetPosition}   />
+                </group>
                 <ambientLight intensity={1} />
                 <directionalLight position={[10,10,10]} intensity={0.5}/>
                 
