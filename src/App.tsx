@@ -1,5 +1,7 @@
+import About from "./section/About";
 import Hero from "./section/Hero";
 import Navbar from "./section/Navbar";
+
 
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <main className="max-w-7xl mx-auto  ">
      <Navbar />
      <Hero />
+     <About />
     </main>
    
     
