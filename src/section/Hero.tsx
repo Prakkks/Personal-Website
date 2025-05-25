@@ -10,6 +10,7 @@ import ReactLogo from "../Components/ReactLogo"
 import Cube from "../Components/cube"
 import HeroCamera from "../Components/HeroCamera"
 import Button from "../Components/Button"
+import { useMediaQuery } from "react-responsive"
 
 
 
@@ -28,13 +29,11 @@ const Hero = () => {
 //   scale: { value: 2.5, min: -10, max: 10 },
 // });
 
-const width = window.innerWidth;
-const isSmall = width <= 480;
-const isMobile = width > 480 && width <= 768;
-const isTablet = width > 768 && width <= 1024;
+const isSmall = useMediaQuery({ maxWidth: 440 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
-
-const sizes = calculateSizes(isSmall,isMobile,isTablet);
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
     <section className='min-h-screen full flex flex-col relative'>
