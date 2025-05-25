@@ -9,6 +9,11 @@ import Target from "../Components/Target"
 import ReactLogo from "../Components/ReactLogo"
 import Cube from "../Components/cube"
 import HeroCamera from "../Components/HeroCamera"
+import Button from "../Components/Button"
+
+
+
+
 
 
 const Hero = () => {
@@ -43,7 +48,7 @@ const sizes = calculateSizes(isSmall,isMobile,isTablet);
                 <Suspense fallback={<CanvasLoader />}>
 
                 <PerspectiveCamera  makeDefault position={[0,0,30]}/>
-               <HeroCamera>
+               <HeroCamera isMobile = {isMobile}>
                  <HackerRoom 
                 scale = {sizes.deskScale} 
                 position = {sizes.deskPosition} 
@@ -61,6 +66,11 @@ const sizes = calculateSizes(isSmall,isMobile,isTablet);
                 
                 </Suspense> 
             </Canvas>
+        </div>
+        <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space "> 
+          <a href="#contact" className="w-fit">
+            <Button name='Lets work together!' isBeam containerClass = 'sm:w-fit w-full sm:min-w-96' /> 
+          </a>
         </div>
     </section>
   )
