@@ -2,6 +2,7 @@ import About from "./section/About";
 import Hero from "./section/Hero";
 import Navbar from "./section/Navbar";
 import Project from "./section/Project";
+import Skills from "./section/Skills";
 
 
 
@@ -12,6 +13,7 @@ function App() {
      {/* <Hero /> */}
      {/* <About /> */}
      <Project />
+     <Skills />
     </main>
    
     

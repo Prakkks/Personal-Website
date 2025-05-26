@@ -103,7 +103,7 @@ body {
   } */
 
   .tech-logo {
-    @apply w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
+    @apply w-10 h-10 rounded-md p-2 bg-neutral-100   backdrop-filter backdrop-blur-lg flex justify-center items-center;
   }
     /* clients section */
   .client-container {
@@ -111,7 +111,7 @@ body {
   }
 
   .client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300/50 ;
   }
 
   .client-content {

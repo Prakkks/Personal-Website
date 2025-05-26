@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { myProjects } from "../Constants"
+import { Canvas } from "@react-three/fiber";
+import { Center, OrbitControls } from "@react-three/drei";
+import CanvasLoader from "../Components/CanvasLoader";
+import ProjectDemo from "../Components/ProjectDemo";
 
 const Project = () => {
     const ProjectCount = myProjects.length;
@@ -60,6 +64,22 @@ const Project = () => {
             </div>
 
         </div>
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+            <Canvas>
+                <ambientLight intensity={3.1415} />
+                <directionalLight position={[10,10,5]} />
+                <Center>
+                    <Suspense fallback={<CanvasLoader />}>
+                    <group scale={2} position={[0,-3,0]} rotation={[0,-0.1,0]}>
+                        <ProjectDemo texture={currentProject.texture} />
+                    </group> 
+                    </Suspense>
+                </Center>
+                <OrbitControls maxPolarAngle={Math.PI/2} enableZoom={true} />
+            </Canvas>
+
+        </div>
+
     </div>
     
     </section>
