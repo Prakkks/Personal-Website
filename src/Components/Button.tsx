@@ -19,5 +19,5 @@ const Button: React.FC<ButtonProps> = ({ name, isBeam = false, containerClass = 
     </button>
   )
 }
-
+ 
 export default Button
