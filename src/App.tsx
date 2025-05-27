@@ -1,5 +1,6 @@
 import About from "./section/About";
 import Contact from "./section/Contact";
+import Footer from "./section/Footer";
 import Hero from "./section/Hero";
 import Navbar from "./section/Navbar";
 import Project from "./section/Project";
@@ -16,6 +17,7 @@ function App() {
      <Project />
      <Skills />
      <Contact />
+     <Footer />
     </main>
    
     
