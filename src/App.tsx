@@ -1,5 +1,6 @@
 import About from "./section/About";
 import Contact from "./section/Contact";
+import Education from "./section/Education";
 import Footer from "./section/Footer";
 import Hero from "./section/Hero";
 import Navbar from "./section/Navbar";
@@ -15,6 +16,7 @@ function App() {
      <Hero />
      <About />
      <Project />
+     <Education />
      <Skills />
      <Contact />
      <Footer />
