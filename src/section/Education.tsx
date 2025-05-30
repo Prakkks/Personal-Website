@@ -8,11 +8,11 @@ import Avatar from "../Components/Avatar"
 
 
 const Education = () => {
-     const [animationName, setAnimationName] = useState('idle');
+     const [animationName, setAnimationName] = useState('Action-Idle');
   return (
     <section className="c-space my-20">
         <div className="w-full text-white-600">
-            <h3 className="head-text text-gray_gradient "> Education</h3>
+            <h3 className="head-text text-gray_gradient " > Education</h3>
 
             <div className="work-container">
                 <div className="work-canvas">
@@ -29,9 +29,9 @@ const Education = () => {
                     <div className="sm:py-10 py-5 sm:px-5 px-2.5">
                         {workExperiences.map( (item,index )=>(
                             <div key={index} 
-                             onClick={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOut={() => setAnimationName('idle')}
+                             onClick={() => setAnimationName(item.animation)}
+                  onPointerOver={() => setAnimationName(item.animation)}
+                  onPointerOut={() => setAnimationName('Action-Idle')}
                             className="work-content_container group">
                                 <div className="flex  py-2 flex-col h-full justify-start  items-center">
                                     <div className="work-content_logo"> 
