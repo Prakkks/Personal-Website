@@ -6,6 +6,7 @@ import CanvasLoader from "../Components/CanvasLoader"
 import Avatar from "../Components/Avatar"
 
 
+
 const Education = () => {
      const [animationName, setAnimationName] = useState('idle');
   return (
