@@ -9,6 +9,8 @@ interface AvatarProps {
   [key: string]: any
 }
 
+
+
 const Avatar = ({ animationName = 'Action-Idle', loop=false, ...props }: AvatarProps) => {
   const group = useRef<Group>(null)
   const currentAction = useRef<AnimationAction | null>(null)

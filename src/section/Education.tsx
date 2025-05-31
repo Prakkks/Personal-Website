@@ -11,12 +11,12 @@ const Education = () => {
      const [animationName, setAnimationName] = useState('Action-Idle');
   return (
     <section className="c-space my-20">
-        <div className="w-full text-white-600">
+        <div className="w-full text-white-600" >
             <h3 className="head-text text-gray_gradient " > Education</h3>
 
             <div className="work-container">
-                <div className="work-canvas">
-                    <Canvas >
+                <div className="work-canvas "  >
+                    <Canvas  >
                         <ambientLight intensity={0.5} />
                         <spotLight position={[10,10,10]} angle={0.15} penumbra={1}/>
                         <directionalLight position={[10,10,10]} intensity={1}/>
