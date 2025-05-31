@@ -36,11 +36,12 @@ interface Sizes {
 export const calculateSizes = (
   isSmall: boolean,
   isMobile: boolean,
-  isTablet: boolean
+  isTablet: boolean,
+  isTab: boolean
 ): Sizes => {
   return {
-    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : isTablet ? 0.07 : 0.085,
-    deskPosition: isSmall? [0,-1.5,0] : isMobile ? [0.5, -4.5, 0] : [0, -8.3, 0],
+    deskScale: isSmall ? 0.6 : isMobile ? 0.7 : isTab ? 0.8 : isTablet ? 0.9 : 1,
+    deskPosition: isSmall? [0,8.5,0] : isMobile ? [2, 3.5, 0] : [2, 0, 0],
     cubePosition: isSmall
       ? [4, -5, 0]
       : isMobile
