@@ -8,8 +8,8 @@ const CanvasComputer = (props:any)  => {
   const { nodes, materials } = useGLTF('/models/desktop_pc/EditedComputerglb.glb')
   return (
     <group {...props} dispose={null}>
-      <group position={[-0.85, 0.831, -0.479]} rotation={[0, 0, 0]}>
-       <group scale={0.017}>
+      <group position={[-0.85, -5.831, -0.479]} rotation={[0, 0, 0]}>
+       <group rotation={[0, -Math.PI/2,0]} scale={0.013}>
        
           <group
             position={[117.182, 25.605, -29.165]}
