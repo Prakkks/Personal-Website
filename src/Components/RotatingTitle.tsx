@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { titles } from "../Constants";
 
-const titles = [
-  "Electronics Engineer",
-  "Aspiring Web Developer",
-  "ML/Robotics Learner"
-];
+
 
 export default function RotatingTitle() {
   const [index, setIndex] = useState(0);
@@ -24,7 +21,7 @@ export default function RotatingTitle() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 1.5 }}
-      className="text-white-800 font-medium lg:text-[22px] sm:text-[20px] xs:text-[18px] text-[14px] lg:leading-[40px]"
+      className="text-white-800 font-medium lg:text-[22px] sm:text-[18px] md:text-[20px] xs:text-[18px] text-[14px] lg:leading-[40px]"
     >
       {titles[index]}
     </motion.h2>

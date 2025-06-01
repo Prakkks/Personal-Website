@@ -43,13 +43,13 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
     <section className=" relative c-space w-full h-screen">
         <div className={` px-6 absolute inset-0 top-[420] max-w-7xol my-20 mx-auto flex flex-row items-center gap-5 sm:items-start justify-center  ` }>
             <div className='flex flex-col justify-center  items-center mt-5'>
-                <div className=' w-5 h-5 rounded-full bg-[#915eff]' />
+               { <div className=' w-5 h-5 rounded-full bg-[#915eff]' />}
                 <div className='w-1 sm:h-60 h-36  violet-gradient ' />
             </div>
         <div >
-            <h1 className='font-black text-white  lg:text-[50px] sm:text-[40px] xs:text-[30px] text-[25px] lg:leading-[98px] mt-2'> Hi, I'm <span className='text-[#915eff]'> Prakriti  </span> Thapa</h1>
+            <h1 className='font-black text-white  md:text-[50px] sm:text-[40px]  xs:text-[30px] text-[25px] lg:leading-[98px] mt-2'> Hi, I'm <span className='text-[#915eff]'> Prakriti  </span> Thapa</h1>
             <RotatingTitle />
-            <p className='text-white-600 font-medium lg:text-[18px] sm:text-[14px] xs:text-[13px] text-[14px]  lg:leading-[30px] mt-2 '>Passionate about building user-friendly applications and intelligent  <br /> systems  by blending web development, machine learning, and robotics.<br className='sm:hidden block' />  </p>
+            <p className='text-white-600 font-medium  sm:text-[16px] md:text-[18px] xs:text-[13px] text-[14px]  lg:leading-[30px] mt-2 '>Passionate about building user-friendly applications and intelligent  <br /> systems  by blending web development, machine learning, and robotics.<br className='sm:hidden block' />  </p>
         </div>
         </div>
          <Canvas className="w-full h-full">

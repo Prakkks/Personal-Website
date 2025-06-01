@@ -1,3 +1,10 @@
+export const titles = [
+  "Electronics, Communication and Information Engineer",
+  "Aspiring Web Developer",
+  "ML/Robotics Learner"
+];
+
+
 export const navLinks = [
   {
     id: 1,
@@ -264,32 +271,32 @@ export const myProjects = [
   },
 ];
 
-export const workExperiences = [
+export const EducationHistory = [
   {
     id: 1,
-    name: 'Framer',
-    pos: 'Lead Web Developer',
-    duration: '2022 - Present',
-    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: '/assets/framer.svg',
+    name: 'Kantipur Engineering College',
+    pos: ' Bachelor of Engineering in Electronics, Communication and Information',
+    duration: '2020 - 2025',
+    title: "Completed my undergraduate studies with a focus on software development, data structures, and emerging technologies like AI and web-based systems. During my time at KEC, I have published a research paper and actively participated in robotics competitions, hackathons, and inter-college software exhibitions, further strengthening my practical skills and collaborative experience.",
+    icon: '/public/assets/keclogo.jpg',
     animation: 'Action-Salute',
   },
   {
     id: 2,
-    name: 'Figma',
-    pos: 'Web Developer',
-    duration: '2020 - 2022',
-    title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: '/assets/figma.svg',
+    name: 'Nepal Police School',
+    pos: '+2 Science',
+    duration: '2018 - 2020',
+    title: "Completed higher secondary education with a major in Science acheiving CGPA 3.63, developing a strong foundation in Science and Mathematics.",
+    icon: '/assets/NPSlogo.png',
     animation: 'Action-Victory',
   },
   {
     id: 3,
-    name: 'Notion',
-    pos: 'Junior Web Developer',
-    duration: '2019 - 2020',
-    title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: '/assets/notion.svg',
+    name: 'New Vision Academy ',
+    pos: 'Secondary Education Examination (SEE)',
+    duration: '2018',
+    title: "Completed my secondary education with 3.70 GPA, where I built strong academic habits and participated in various extracurricular activities.",
+    icon: '/assets/nva.jpg',
     animation: 'Action-Idle',
   },
 ];

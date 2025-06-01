@@ -74,11 +74,11 @@ body {
   }
 
   .btn-ping {
-    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D2C4FF] opacity-75;
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffc4c4] opacity-75;
   }
 
   .btn-ping_dot {
-    @apply relative inline-flex rounded-full h-3 w-3 bg-amber-50;
+    @apply relative inline-flex rounded-full h-3 w-3 bg-[#1af4ab];
   }
 
   /* about section */
@@ -124,11 +124,12 @@ body {
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg;
   }
 
   .work-content {
-    @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-2 rounded-lg bg-black/40  ;
+    /* @apply col-span-2 rounded-lg bg-black-200 border border-black-300 ; */
   }
 
   .work-content_container {
@@ -136,7 +137,7 @@ body {
   }
 
   .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+    @apply rounded-4xl w-16 h-16 p-2 bg-white-800;
   }
 
   .work-content_bar {
@@ -184,7 +185,7 @@ body {
 }
 
 .waving-hand {
-  animation-name: wave-animation;
+  animation-name: wobble-z;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
@@ -200,6 +201,9 @@ body {
     rgba(60, 51, 80, 0) 100%
   );
 }
+
+
+
 
 
 
@@ -230,4 +234,23 @@ body {
   }
    
 
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+    /* box-shadow: 0 0 10px #0f0e22; */
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1.001) translateY(-7px);
+    /* box-shadow: 0 0 30px #0a0916; */
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.breath-animation {
+  animation: breath 1.6s ease-in-out infinite alternate;
+  display: inline-block; /* or block/flex depending on your content */
+  transform-origin: center;
 }
