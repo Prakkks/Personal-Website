@@ -91,14 +91,21 @@ const ProjectCanvas: React.FC<ProjectCanvasProps> = ({ currentProject, isMobile,
 
 const Project = () => {
     const [show3D, setShow3D] = useState(false);
+    const[ activecategory , setactivecategory] = useState('Web Development');
+    const filteredProjects = myProjects.filter((project) => project.category === activecategory);
+    const projectCategories = [...new Set(myProjects.map(project => project.category))];
+
+    console.log(projectCategories);
+
+       
    
  const isTablet = useMediaQuery({maxWidth: 1024 , minWidth: 640 });
     const isMobile = useMediaQuery({maxWidth: 1024 });
     const isSmall = useMediaQuery({maxWidth: 320 });
-    const ProjectCount = myProjects.length;
+    const ProjectCount = filteredProjects.length;
     const [selectedPindex, setselectedPindex] = useState(0);
     
-    const currentProject = myProjects[selectedPindex];
+    const currentProject = filteredProjects[selectedPindex];
 
      const handleNavigation = (direction: 'previous' | 'next') => {
   setselectedPindex((prevIndex) => {
@@ -113,12 +120,29 @@ const Project = () => {
 
 
   return (
-    <section className="c-space my-20"> 
+    <section className="c-space my-20 relative "> 
     <div className="flex flex-row justify-between ">
     <p className=" text-gray_gradient sm:text-4xl text-3xl font-semibold"> My Work</p>
     {isMobile && <ToggleButton isActive={!show3D} onToggle={() => setShow3D((prev) => !prev)} />}
     </div>
-    <div className="grid :grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+    <div className="text-white mt-10  ">
+            <div className=" flex  flex-row md:px-10 justify-left px-5 text-xs md:text-base   "> 
+            {
+                projectCategories.map((project)=>(
+                    <div className={`project-title ${
+                        activecategory === project
+                          ? "text-[#915eff]  border-b-primary-purple"
+                               : ''
+                      } `}  key={project} onClick={() => setactivecategory(project)}> 
+                        {project}
+                    </div>
+                ))
+            }
+
+
+            </div>
+    </div>
+    <div className="grid lg:grid-cols-2 grid-cols-1  gap-5 w-full relative">
      {!isMobile ? (
           <>
             <ProjectDetail currentProject={currentProject} handleNavigation={handleNavigation} />
@@ -181,7 +205,10 @@ const Project = () => {
 
         )}
 
+    
+ 
     </div>
+   
     
     </section>
 

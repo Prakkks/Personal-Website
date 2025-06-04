@@ -25,6 +25,9 @@ body {
   --color-white-700: #D6D9E9;
   --color-white-600: #AFB0B6;
   --color-white-500: #62646C;
+
+  --color-primary-purple : #915eff;
+  --color-primary-dark-purple:#321A7D;
   
   /* Example font family as CSS variable */
   --font-generalsans: 'General Sans', sans-serif;
@@ -170,7 +173,9 @@ body {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
 
-
+  .project-title{
+    @apply   p-4 border-b-2 hover:text-[#b292f7] shadow-md transition duration-300 ease-in-out  ;
+  }
    
 }
 
@@ -201,6 +206,7 @@ body {
     rgba(60, 51, 80, 0) 100%
   );
 }
+
 
 
 

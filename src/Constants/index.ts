@@ -83,6 +83,7 @@ export const calculateSizes = (
 
 export const myProjects = [
   {
+    category: 'Web Development',
     title: 'Podcastr - AI Podcast Platform',
     desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
     subdesc:
@@ -120,6 +121,7 @@ export const myProjects = [
     ],
   },
   {
+    category: 'Web Development',
     title: 'LiveDoc - Real-Time Google Docs Clone',
     desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
     subdesc:
@@ -157,6 +159,7 @@ export const myProjects = [
     ],
   },
   {
+    category: 'Web Development',
     title: 'CarePulse - Health Management System',
     desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
     subdesc:
@@ -196,6 +199,7 @@ export const myProjects = [
     ],
   },
   {
+    category: 'Machine Learning',
     title: 'Horizon - Online Banking Platform',
     desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
     subdesc:
@@ -233,6 +237,7 @@ export const myProjects = [
     ],
   },
   {
+    category: 'Data Science',
     title: 'Imaginify - AI Photo Manipulation App',
     desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
     subdesc:
