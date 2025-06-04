@@ -5,10 +5,26 @@ const Skills = () => {
          <div className="flex flex-row justify-between ">
     <p className=" text-gray_gradient sm:text-4xl text-3xl font-semibold"> Skill Summary</p>
     </div>
-        <p className="text-white">
-            Here Remaining to do like moving continuous animation from left to write and showcase what I have learned and done till date 
-        </p>
-        <p> Also add education section instead of WOrk experience in hero </p>
+    <div className="flex  flex-col items-center justify-center text-white">
+    <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 text-white mt-12 gap-5">
+      
+      <div className="flex justify-center items-center border-1 rounded-2xl pr-2"> 
+      <img src="/public/assets/grid1.png" className="w-[100px] h-[100px] " />
+      <span >HTML </span> 
+      </div>
+      <div className="flex justify-center items-center border-1 rounded-2xl "> 
+      <img src="/public/assets/grid1.png" className="w-[100px] h-[100px] " />
+      <span>CSS </span> 
+      </div>
+      <div className="flex justify-center items-center border-1 rounded-2xl "> 
+      <img src="/public/assets/grid1.png" className="w-[100px] h-[100px] " />
+      <span>JavaScript </span> 
+      </div>
+    </div>
+
+  
+    <div className="flex items-center justify-center text-white mt-10">FrontEnd  </div>
+    </div>
     </section>
   )
 }
