@@ -95,13 +95,11 @@ const Project = () => {
     const filteredProjects = myProjects.filter((project) => project.category === activecategory);
     const projectCategories = [...new Set(myProjects.map(project => project.category))];
 
-    console.log(projectCategories);
-
+   
        
    
  const isTablet = useMediaQuery({maxWidth: 1024 , minWidth: 640 });
     const isMobile = useMediaQuery({maxWidth: 1024 });
-    const isSmall = useMediaQuery({maxWidth: 320 });
     const ProjectCount = filteredProjects.length;
     const [selectedPindex, setselectedPindex] = useState(0);
     
@@ -133,7 +131,7 @@ const Project = () => {
                         activecategory === project
                           ? "text-[#915eff]  border-b-primary-purple"
                                : ''
-                      } `}  key={project} onClick={() => setactivecategory(project)}> 
+                      } `}  key={project} onClick={() => {setactivecategory(project); setselectedPindex(0);}}> 
                         {project}
                     </div>
                 ))

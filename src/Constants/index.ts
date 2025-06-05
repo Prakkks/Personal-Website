@@ -309,3 +309,26 @@ export const EducationHistory = [
     animation: 'Action-Idle',
   },
 ];
+
+
+export const skill_set =[
+ { 'Frontend Development': [
+    { name: 'HTML', icon: 'assets/icons/html-5.png', color: '#e34c26' },
+    { name: 'CSS', icon: '/assets/icons/css-3.png', color: '#264de4' },
+    { name: 'JavaScript', icon: '/assets/icons/css-3.png', color: '#f0db4f' },
+    { name: 'ReactJS', icon: '/assets/icons/structure.png', color: '#61DBFB' },
+    { name: 'TailwindCSS', icon: '/assets/icons/css-3.png', color: '#38bdf8' },
+  ]},
+ { backend: [
+    { name: 'Node.js', icon: '/icons/node.svg', color: '#68a063' },
+    { name: 'MongoDB', icon: '/icons/mongo.svg', color: '#4DB33D' },
+    { name: 'Express.js', icon: '/icons/express.svg', color: '#000000' },
+    { name: 'Convex', icon: '/icons/convex.svg', color: '#6C63FF' },
+  ]},
+ { ml: [
+    { name: 'Python', icon: '/icons/python.svg', color: '#3572A5' },
+    { name: 'MediaPipe', icon: '/icons/mediapipe.svg', color: '#ff6f61' },
+    { name: 'OpenCV', icon: '/icons/opencv.svg', color: '#5C3EE8' },
+    { name: 'Robotics', icon: '/icons/robotics.svg', color: '#f97316' },
+  ]},
+];
