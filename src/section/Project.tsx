@@ -98,7 +98,7 @@ const Project = () => {
    
        
    
- const isTablet = useMediaQuery({maxWidth: 1024 , minWidth: 640 });
+    const isTablet = useMediaQuery({maxWidth: 1024 , minWidth: 640 });
     const isMobile = useMediaQuery({maxWidth: 1024 });
     const ProjectCount = filteredProjects.length;
     const [selectedPindex, setselectedPindex] = useState(0);

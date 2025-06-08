@@ -319,13 +319,13 @@ export const skill_set =[
     { name: 'ReactJS', icon: '/assets/icons/structure.png', color: '#61DBFB' },
     { name: 'TailwindCSS', icon: '/assets/icons/css-3.png', color: '#38bdf8' },
   ]},
- { backend: [
+ { 'backend': [
     { name: 'Node.js', icon: '/icons/node.svg', color: '#68a063' },
     { name: 'MongoDB', icon: '/icons/mongo.svg', color: '#4DB33D' },
     { name: 'Express.js', icon: '/icons/express.svg', color: '#000000' },
     { name: 'Convex', icon: '/icons/convex.svg', color: '#6C63FF' },
   ]},
- { ml: [
+ { 'ml': [
     { name: 'Python', icon: '/icons/python.svg', color: '#3572A5' },
     { name: 'MediaPipe', icon: '/icons/mediapipe.svg', color: '#ff6f61' },
     { name: 'OpenCV', icon: '/icons/opencv.svg', color: '#5C3EE8' },
