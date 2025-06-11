@@ -42,7 +42,8 @@ const CertificationIntern = () => {
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.2 }}
-                  className="relative bg-black-500 sm:bg-primary-dark-purple  p-4 rounded-lg shadow-lg"
+                  // className="relative bg-black-500 sm:bg-primary-dark-purple  p-4 rounded-lg shadow-lg"
+                  className="relative border p-3 border-[#8572ae]  bg-[rgba(102,77,156,0.1)] backdrop-blur-md rounded-lg  "
                 >
                   <h3 className=" text-md sm:text-xl font-bold">{item.title}</h3>
                   <span className=" text-xs sm:text-sm text-gray-300">{item.period}</span>
@@ -55,15 +56,17 @@ const CertificationIntern = () => {
 
         
         {change === 2 && (
-  <div className="text-white-800 p-5 w-full  pl-10 ">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 gap-3 ">
+  <div className="text-white-800 p-5 w-full  sm:pl-10 ">
+    <div className="grid  grid-cols-2 lg:grid-cols-3 sm:gap-6 gap-3 ">
      {certifications.map((cert, index) => (
   <motion.div
     key={cert.id}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: index * 0.2 }}
-    className=" bg-black-500 sm:bg-primary-dark-purple p-2 pl-4 sm:p-4 rounded-lg shadow-lg"
+    // className=" bg-black-500 sm:bg-primary-dark-purple p-2 pl-4 sm:p-4 rounded-lg shadow-lg"
+    className="relative border border-[#5d3f9c] shadow-md bg-[rgba(145,94,255,0.1)] backdrop-blur-md  p-3 rounded-lg   "
+
   >
     <div className="flex items-center justify-between">
       <h3 className="text-sm sm:text-[17px] font-bold">{cert.title}</h3>

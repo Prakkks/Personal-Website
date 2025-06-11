@@ -73,7 +73,7 @@ body {
   }
 
     .btn {
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-[#321A7D]  border-2 border-[#915eff]/5 hover:scale-[1.1] transition-all active:scale-95 text-white mx-auto;
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-[#321A7D]  border-2 border-[#915eff]/5 hover:scale-[1.05] transition-all active:scale-95 text-white mx-auto;
   }
 
   .btn-ping {
@@ -163,6 +163,8 @@ body {
   .field-btn {
     @apply bg-black-500 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3;
   }
+
+
 
   .field-btn_arrow {
     @apply w-2.5 h-2.5 object-contain invert brightness-0;
@@ -284,3 +286,5 @@ body {
 html {
   scroll-padding-top: 6rem; /* matches your sticky header height */
 }
+
+

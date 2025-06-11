@@ -77,7 +77,7 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
             </Canvas>
              <div className="absolute bottom-10 sm:bottom-7 right-0 left-0  lg:right-16 w-full z-10 c-space "> 
           <a href="#about" className="w-fit">
-            <Button name='Lets work together!' isBeam containerClass = 'sm:w-fit w-full sm:min-w-96' /> 
+            <Button name='Learn More About Me!' isBeam containerClass = 'sm:w-fit w-full sm:min-w-96' /> 
           </a>
         </div>
     </section>
