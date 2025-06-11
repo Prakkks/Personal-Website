@@ -15,7 +15,7 @@ const Education = () => {
     const isDesktop = useMediaQuery({ minWidth: 1024 });
      const [animationName, setAnimationName] = useState('Action-Idle');
   return (
-    <section className="c-space my-20" id="education">
+    <section className="c-space my-10 sm:my-20" id="education">
         <div className="w-full text-white-600" >
             <h3 className="head-text text-gray_gradient " > Education</h3>
 
@@ -31,7 +31,7 @@ const Education = () => {
                     </Canvas>
                 </div>}
                 <div className="work-content breath-animation">
-                    <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+                    <div className="sm:py-10 py-0 sm:px-5 px-2.5">
                         {EducationHistory.map( (item,index )=>(
                             <div key={index} 
                              onClick={() => setAnimationName(item.animation)}
@@ -40,14 +40,14 @@ const Education = () => {
                             className="work-content_container group">
                                 <div className="flex  py-2 flex-col h-full justify-start  items-center">
                                     <div className="work-content_logo "> 
-                                        <img src={item.icon} alt="logo" className="w-full  h-full object-cover scale-120" />
+                                        <img src={item.icon} alt="logo" className="sm:w-full  sm:h-full scale-150 object-cover sm:scale-120" />
                                     </div>
                                     <div className="work-content_bar" />
                                  </div>   
                                 <div className="sm:p-5 p-2.5 py-5">
                                 <p className="font-bold text-white-800">{item.name}</p>
-                                <p className="text-sm mb-5 ">{item.pos } -- {item.duration}</p>
-                                <p className="group-hover:text-white transition ease-in-out duration-500 xl:text-justify text-sm md:text-lg ">
+                                <p className="text-sm mb-2 sm:mb-5 ">{item.pos } -- {item.duration}</p>
+                                <p className="group-hover:text-white transition ease-in-out duration-500 sm:text-justify text-sm md:text-lg ">
                                     {item.title}
                                 </p>
                                  </div>

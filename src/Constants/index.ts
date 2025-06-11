@@ -293,7 +293,7 @@ export const EducationHistory = [
     name: 'Kantipur Engineering College',
     pos: ' Bachelor of Engineering in Electronics, Communication and Information',
     duration: '2020 - 2025',
-    title: "Completed my undergraduate studies with a focus on software development, data structures, and emerging technologies like AI and web-based systems. During my time at KEC, I have published a research paper and actively participated in robotics competitions, hackathons, and inter-college software exhibitions, further strengthening my practical skills and collaborative experience.",
+    title: "Completed my undergraduate studies with a focus on software development, data structures, and emerging technologies like AI and web-based systems.",
     icon: '/public/assets/keclogo.jpg',
     animation: 'Action-Salute',
   },

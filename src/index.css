@@ -52,7 +52,7 @@ body {
 
 
   .nav-li {
-    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 hover:border-l-4  hover:border-l-primary-purple;
+    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5  ;
   }
 
   .nav-li_a {
@@ -66,7 +66,7 @@ body {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
     .head-text {
-    @apply sm:text-4xl text-3xl font-semibold ;
+    @apply sm:text-4xl text-2xl font-semibold ;
   }
     .hero_tag {
     @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal;
@@ -140,7 +140,7 @@ body {
   }
 
   .work-content_logo {
-    @apply rounded-4xl w-16 h-16 p-2 bg-white-800;
+    @apply rounded-4xl w-10 h-10 sm:w-16 sm:h-16 p-2 bg-white-800;
   }
 
   .work-content_bar {
