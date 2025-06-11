@@ -280,3 +280,7 @@ body {
   display: inline-block; /* or block/flex depending on your content */
   transform-origin: center;
 }
+
+html {
+  scroll-padding-top: 6rem; /* matches your sticky header height */
+}

@@ -15,7 +15,7 @@ const Education = () => {
     const isDesktop = useMediaQuery({ minWidth: 1024 });
      const [animationName, setAnimationName] = useState('Action-Idle');
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="education">
         <div className="w-full text-white-600" >
             <h3 className="head-text text-gray_gradient " > Education</h3>
 

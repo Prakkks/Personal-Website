@@ -118,7 +118,7 @@ const Project = () => {
 
 
   return (
-    <section className="c-space my-20 relative "> 
+    <section className="c-space my-20 relative " id="project"> 
     <div className="flex flex-row justify-between ">
     <p className=" text-gray_gradient sm:text-4xl text-3xl font-semibold"> My Work</p>
     {isMobile && <ToggleButton isActive={!show3D} onToggle={() => setShow3D((prev) => !prev)} />}

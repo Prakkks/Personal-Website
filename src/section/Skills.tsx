@@ -5,7 +5,7 @@ const Skills = () => {
   
 
   return (
- <section className="c-space my-20 relative">
+ <section className="c-space my-20 relative" id="skill">
 
 
   {/* <div className="w-full md:w-1/2 p-4 text-white">

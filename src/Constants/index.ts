@@ -18,14 +18,21 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'Projects',
-    href: '#projects',
+    name: 'Education',
+    href: '#education',
   },
-  {  id: 5,
-    name: 'Skills',
-    href: '#skill'},
+  {
+    id: 3,
+    name: 'Certifications',
+    href: '#internship',
+  },
   {
     id: 4,
+    name: 'Projects',
+    href: '#project',
+  },
+  {
+    id: 5,
     name: 'Contact',
     href: '#contact',
   },
@@ -331,3 +338,18 @@ export const skill_set =[
     { name: 'Robotics', icon: '/assets/icons/robo.png' },
 
 ];
+
+  export const internships = [
+    { id: 1, title: "Index IT Hub Nepal", period: "Dec 2024- Feb 2025", role: "Data & ML Intern" },
+    { id: 2, title: "Nepal Telecom", period: "Apr - May 2024", role: "Telecommunication and Networking Intern" },
+  ];
+
+  export const certifications = [
+  { id: 1, title: "Data Science with Python", provider: "Evolve IT Hub Nepal", date: " Nov 2024" , link:""},
+  { id: 2, title: "Become a Python Master", provider: "Programiz", date: "Mar 2025" , link:"https://programiz.pro/certificates/BDB509F19222"},
+  { id: 3, title: "Master DSA with Python", provider: "Programiz", date: "June 2025" , link:"https://programiz.pro/certificates/549784EAA0C8"},
+   { id: 4, title: "AWS Cloud Clubs Generative AI Camper", provider: "AWS User Group", date: "Jul 2024" , link:"https://www.credly.com/badges/580afe3c-2372-407f-8d7c-3aad1b318e60/linked_in_profile"},
+  { id: 5, title: "Learn SQL Basis", provider: "Programiz", date: "Mar 2025" , link:"https://programiz.pro/certificates/080A4C117D53"},
+  { id: 6, title: "AWS Cloud Club Nepal Cohort-I ", provider: "AWS Cloud Club Nepal", date: "Sep 2024" , link:""},
+];
+

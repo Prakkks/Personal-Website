@@ -7,18 +7,47 @@ const Footer = () => {
             <p> |</p>
             <p> Privacy Policy </p>
         </div>
-        <div className="flex gap-3">
-            <div className="social-icon">
-                <img src="/assets/github.svg" alt="github"  className="w-1/2 h-1/2"/> 
-            </div>
-                  <div className="social-icon">
-                <img src="/assets/twitter.svg" alt="twitter"  className="w-1/2 h-1/2"/> 
-            </div>
-                  <div className="social-icon">
-                <img src="/assets/instagram.svg" alt="linkedin"  className="w-1/2 h-1/2"/> 
-            </div>
+      <div className="flex gap-3">
+  <a
+    href="https://github.com/Prakkks"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon"
+  >
+    <img
+      src="/assets/github.svg"
+      alt="github"
+      className="w-2/3 h-2/3 grayscale hover:grayscale-0 transition duration-500"
+    />
+  </a>
 
-        </div>
+  <a
+    href="https://twitter.com/prakkks_"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon"
+  >
+    <img
+      src="/assets/x.svg"
+      alt="twitter"
+      className="w-1/2 h-1/2 grayscale hover:grayscale-0 transition duration-500"
+    />
+  </a>
+
+  <a
+    href="https://linkedin.com/in/prakkks"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon"
+  >
+    <img
+      src="/assets/linkedin.png"
+      alt="linkedin"
+      className="w-1/2 h-1/2 grayscale hover:grayscale-0 transition duration-500"
+    />
+  </a>
+</div>
+
         <p className="text-white-500"> 2025 Prakriti. All rights reserved. </p>
     </section>
   )
