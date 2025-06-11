@@ -22,17 +22,17 @@ export const navLinks = [
     href: '#education',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Certifications',
     href: '#internship',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Projects',
     href: '#project',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Contact',
     href: '#contact',
   },
