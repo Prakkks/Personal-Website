@@ -23,7 +23,7 @@ function App() {
      <div className="max-w-7xl mx-auto">
      {/* <Hero /> */}
      <About />
-     
+      <Skills />
      </div>
      <div className="bg-[url('/assets/herobg-flip.png')]  bg-cover bg-center max-w-full  ">
      <div className="max-w-7xl mx-auto">
@@ -32,7 +32,7 @@ function App() {
      </div>
      <div className="max-w-7xl mx-auto">
       <Project />
-     <Skills />
+    
      <Contact />
      <Footer />
      </div>

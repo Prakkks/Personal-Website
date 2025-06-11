@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="contact-container">
         <h3 className="head-text text-gray_gradient"> Let's Talk</h3>
         <p className=" text-lg text-white-600 mt-3">
-            Whether you are looking to build a website,  imrpoving your existing platform or crating a solution, I'm here to help.
+           I'm just getting started in my professional journey, and I'm excited to collaborate, learn, and grow. If you're looking for a passionate beginner or just want to chat, let's talk!
         </p>
         <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
             <label className="space-y-3"> 
