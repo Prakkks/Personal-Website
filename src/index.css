@@ -1,9 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/general-sans');
 @import "tailwindcss";
 @import 'tailwindcss/utilities';
+@custom-variant dark (&:where(.dark, .dark *));
 
 * {
   scroll-behavior: smooth;
+  
+}
+
+html {
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {

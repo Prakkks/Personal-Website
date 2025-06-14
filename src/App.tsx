@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+// note that dark mode is light for us okay ?
+
+
 import About from "./section/About";
 import CertificationIntern from "./section/CertificationIntern";
 import Contact from "./section/Contact";

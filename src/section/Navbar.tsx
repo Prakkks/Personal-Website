@@ -1,42 +1,86 @@
-import { useState } from "react"
+import { useEffect, useState } from "react";
 import { navLinks } from "../Constants";
 
-const NavItems = () => {
-  return (
-   <ul className="nav-ul"> 
- {  navLinks.map((item) =>(
-  <li key={item.id} className="nav-li"> 
-  <a href={item.href} className="nav-li_a" onClick={()=> {}}> {item.name}</a>
-  </li>
- ) )}
-   </ul>
-  )
-
-}
- 
+const NavItems = () => (
+  <ul className="nav-ul">
+    {navLinks.map((item) => (
+      <li key={item.id} className="nav-li">
+        <a href={item.href} className="nav-li_a">
+          {item.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const  toggleMenu= () => setIsOpen( (navCloseBtntoMenu) => !navCloseBtntoMenu);
+  const [isDark, setIsDark] = useState(true);
   const logoname = 'Prakriti';
-  return (
-    <header className="fixed text-white top-0 left-0 right-0 z-50  ">
-        <div className=" max-w-7xl mx-auto">
-            <div className="flex justify-between items-center py-5 mx-auto c-space"> 
-              <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">{logoname}</a>
-              <button onClick={ toggleMenu} className="text-neutral-400  hover:text-white focus:outline-none  sm:hidden flex   " aria-label="Toggle Menu" > 
-                <img src={isOpen ? 'public/assets/close.svg'  : 'assets/menu.svg'} alt="toggle" className="w-6 h-6" />
-              </button>
-             <nav className="sm:flex hidden  "> <NavItems/> </nav>
-             
-            </div>
-        </div>
-        <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} `}> 
-         
-         <nav className="p-5">  <NavItems /></nav>
-        </div>
-    </header>
-  )
-}
 
-export default Navbar
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
+  // Toggle dark class on <html>
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isDark) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDark]);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 text-white dark:text-black transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-center py-5 px-4">
+          <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white dark:hover:text-black transition-colors">
+            {logoname}
+          </a>
+
+          <div className="flex flex-row gap-5 items-center">
+            {/* Mobile toggle */}
+            <button
+              onClick={toggleMenu}
+              className="text-neutral-400 hover:text-white dark:hover:text-black focus:outline-none sm:hidden flex"
+              aria-label="Toggle Menu"
+            >
+              <img
+                src={isOpen ? '/assets/close.svg' : '/assets/menu.svg'}
+                alt="toggle"
+                className="w-6 h-6"
+              />
+            </button>
+
+            {/* Desktop nav */}
+            <nav className="sm:flex hidden">
+              <NavItems />
+            </nav>
+
+            {/* Theme toggle */}
+          
+           
+
+              {/* Toggle button */}
+              <img
+                className="w-10 h-10 rounded-full p-2 cursor-pointer bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-600 transition duration-300"
+                src={isDark ? '/assets/moon.png' : '/assets/sun.svg'}
+                onClick={() => setIsDark((prev) => !prev)}
+                alt="theme-toggle"
+              />
+        
+          </div>
+        </div>
+      </div>
+
+      {/* Sidebar nav for mobile */}
+      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} overflow-hidden transition-all duration-300`}>
+        <nav className="p-5">
+          <NavItems />
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
