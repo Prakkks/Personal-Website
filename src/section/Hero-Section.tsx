@@ -10,10 +10,13 @@ import Button from '../Components/Button'
 import RotatingTitle from '../Components/RotatingTitle'
 
 
+interface HeroProps {
+  isDark: boolean;
+}
 
 
 
-const HeroSection = () => {
+const HeroSection = ({isDark}:HeroProps) => {
 const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -34,6 +37,8 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
  }, [isSmall || isMobile]);
 
   
+
+
 
   
   
@@ -57,11 +62,19 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
                 <PerspectiveCamera  makeDefault position={[0,0,30]}/>
             <HeroCamera isMobile={isMobile}>
 
-                    { small && (<CanvasComputer  scale = {sizes.deskScale}  position={sizes.deskPosition} />)}
+                    { small && (<CanvasComputer  isDark scale = {sizes.deskScale}  position={sizes.deskPosition} />)}
 
-                <ambientLight intensity={1} />
+                <ambientLight intensity={0.6} position={[0,0,5]} />
                 <directionalLight color={'#C8A2C8'}  position={[10,4,10]} intensity={5}/>
                 <SpotLight position={[-20,15,10]}  angle={0.12} penumbra={1} intensity={1} castShadow shadow-mapSize = {1024}/>
+                
+                <ambientLight intensity={0.6} position={[10,2,5]} />
+                <directionalLight color={'#C8A2C8'}  position={[5,4,5]} intensity={2}/>
+                {/* <SpotLight position={[-20,15,10]}  angle={0.12} penumbra={1} intensity={1} castShadow shadow-mapSize = {1024}/> */}
+
+                {/* <ambientLight intensity={1} position={[-5,5,5]} /> */}
+                {/* <directionalLight color={'#C8A2C8'}  position={[-10,4,2]} intensity={5}/> */}
+                {/* <SpotLight position={[-20,15,10]}  angle={0.12} penumbra={1} intensity={1} castShadow shadow-mapSize = {1024}/> */}
 
                      {laptop && (
                    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[-0.8, -5.5, -1.5]}>

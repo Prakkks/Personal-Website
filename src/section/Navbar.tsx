@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../Constants";
 
+interface NavbarProps {
+  isDark: boolean;
+  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 const NavItems = () => (
   <ul className="nav-ul">
     {navLinks.map((item) => (
@@ -13,14 +18,13 @@ const NavItems = () => (
   </ul>
 );
 
-const Navbar = () => {
+const Navbar = ({ isDark, setIsDark }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(true);
-  const logoname = 'Prakriti';
+  const logoname = "Prakriti";
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
-  // Toggle dark class on <html>
+  // Update root html class
   useEffect(() => {
     const root = document.documentElement;
     if (isDark) {
@@ -31,10 +35,10 @@ const Navbar = () => {
   }, [isDark]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 text-white dark:text-black transition-colors duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 dark:text-white text-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 px-4">
-          <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white dark:hover:text-black transition-colors">
+          <a href="/" className="text-neutral-400 font-bold text-xl dark:hover:text-white hover:text-black transition-colors">
             {logoname}
           </a>
 
@@ -58,17 +62,12 @@ const Navbar = () => {
             </nav>
 
             {/* Theme toggle */}
-          
-           
-
-              {/* Toggle button */}
-              <img
-                className="w-10 h-10 rounded-full p-2 cursor-pointer bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-600 transition duration-300"
-                src={isDark ? '/assets/moon.png' : '/assets/sun.svg'}
-                onClick={() => setIsDark((prev) => !prev)}
-                alt="theme-toggle"
-              />
-        
+            <img
+              className="w-10 h-10 rounded-full p-2 cursor-pointer bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 hover:dark:bg-gray-600 transition duration-300"
+              src={isDark ? '/assets/moon.png' : '/assets/sun.svg'}
+              onClick={() => setIsDark((prev) => !prev)}
+              alt="theme-toggle"
+            />
           </div>
         </div>
       </div>

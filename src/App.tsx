@@ -1,6 +1,7 @@
 // note that dark mode is light for us okay ?
 
 
+import { useState } from "react";
 import About from "./section/About";
 import CertificationIntern from "./section/CertificationIntern";
 import Contact from "./section/Contact";
@@ -39,11 +40,14 @@ function App() {
   //   };
   // }, []);
 
+
+const [isDark, setIsDark] = useState(true);
+
   return (
     <main className="select-none" id="home">
-      <div className="bg-[url('/assets/herobg.png')] bg-cover bg-center max-w-full">
+      <div className="dark:bg-[url('/assets/herobg.png')] bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center max-w-full">
         <div className="max-w-7xl mx-auto">
-          <Navbar />
+          <Navbar isDark={isDark} setIsDark={setIsDark} />
           <HeroSection />
         </div>
       </div>
