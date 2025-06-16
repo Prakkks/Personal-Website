@@ -1,7 +1,6 @@
 // note that dark mode is light for us okay ?
 
 
-import { useState } from "react";
 import About from "./section/About";
 import CertificationIntern from "./section/CertificationIntern";
 import Contact from "./section/Contact";
@@ -52,7 +51,7 @@ function App() {
         <div className={`absolute inset-0 bg-[url('/assets/herobg.png')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-100' : 'opacity-0'}`} />
         <div className="max-w-7xl mx-auto">
           <Navbar />
-          <HeroSection  isDark/>
+          <HeroSection />
         </div>
       </div>
 

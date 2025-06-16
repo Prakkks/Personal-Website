@@ -58,15 +58,15 @@ body {
 
 
   .nav-li {
-    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5  ;
+    @apply dark:text-neutral-400  text-neutral-500  dark:hover:text-white hover:text-black font-generalsans max-sm:dark:hover:bg-black-500  max-sm:hover:bg-white-700  max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5  ;
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-lg md:text-base dark:hover:text-white  hover:text-black transition-colors;
   }
 
   .nav-sidebar {
-    @apply absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+    @apply absolute left-0 right-0 dark:bg-black-200 bg-white backdrop-blur-sm  transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
   }
   .text-gray_gradient {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;

@@ -36,7 +36,7 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 dark:text-white text-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 px-4">
-          <a href="/" className="text-neutral-400 font-bold text-xl dark:hover:text-white hover:text-black transition-colors">
+          <a href="/" className="dark:text-neutral-400  text-neutral-500 font-bold text-xl dark:hover:text-white hover:text-black transition-colors">
             {logoname}
           </a>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
               <img
                 src={isOpen ? '/assets/close.svg' : '/assets/menu.svg'}
                 alt="toggle"
-                className="w-6 h-6"
+                className="w-6 h-6 dark:invert-0 invert"
               />
             </button>
 
@@ -71,8 +71,8 @@ const Navbar = () => {
       </div>
 
       {/* Sidebar nav for mobile */}
-      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} overflow-hidden transition-all duration-300`}>
-        <nav className="p-5">
+      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'} overflow-hidden transition-all duration-300 `}>
+        <nav className="p-5 border-t-1 dark:border-t-black-500 border-t-blue-300  ">
           <NavItems />
         </nav>
       </div>
