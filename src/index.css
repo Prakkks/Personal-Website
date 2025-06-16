@@ -33,7 +33,7 @@ body {
   --color-white-500: #62646C;
 
   --color-primary-purple : #915eff;
-  --color-primary-dark-purple:#321A7D;
+  --color-primary-dark-purple:`;
   
   /* Example font family as CSS variable */
   --font-generalsans: 'General Sans', sans-serif;
@@ -79,7 +79,7 @@ body {
   }
 
     .btn {
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-[#321A7D]  border-2 border-[#915eff]/5 hover:scale-[1.05] transition-all active:scale-95 text-white mx-auto;
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md dark:bg-[#321A7D] bg-[#915eff]  border-2 border-[#915eff]/5 hover:scale-[1.05] transition-all active:scale-95 text-white mx-auto;
   }
 
   .btn-ping {
@@ -214,6 +214,7 @@ body {
     rgba(60, 51, 80, 0) 100%
   );
 }
+
 
 
 
