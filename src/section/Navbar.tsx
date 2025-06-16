@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../Constants";
+import { useTheme } from "../assets/themeprovider";
 
-interface NavbarProps {
-  isDark: boolean;
-  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 const NavItems = () => (
   <ul className="nav-ul">
@@ -18,7 +15,8 @@ const NavItems = () => (
   </ul>
 );
 
-const Navbar = ({ isDark, setIsDark }: NavbarProps) => {
+const Navbar = () => {
+   const { isDark, setIsDark } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const logoname = "Prakriti";
 

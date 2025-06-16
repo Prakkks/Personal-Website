@@ -10,13 +10,11 @@ import Button from '../Components/Button'
 import RotatingTitle from '../Components/RotatingTitle'
 
 
-interface HeroProps {
-  isDark: boolean;
-}
 
 
 
-const HeroSection = ({isDark}:HeroProps) => {
+
+const HeroSection = () => {
 const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
@@ -62,7 +60,7 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
                 <PerspectiveCamera  makeDefault position={[0,0,30]}/>
             <HeroCamera isMobile={isMobile}>
 
-                    { small && (<CanvasComputer  isDark scale = {sizes.deskScale}  position={sizes.deskPosition} />)}
+                    { small && (<CanvasComputer  scale = {sizes.deskScale}  position={sizes.deskPosition} />)}
 
                 <ambientLight intensity={0.6} position={[0,0,5]} />
                 <directionalLight color={'#C8A2C8'}  position={[10,4,10]} intensity={5}/>

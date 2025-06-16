@@ -11,6 +11,7 @@ import HeroSection from "./section/Hero-Section";
 import Navbar from "./section/Navbar";
 import Project from "./section/Project";
 import Skills from "./section/Skills";
+import { useTheme } from "./assets/themeprovider";
 
 function App() {
   // useEffect(() => {
@@ -41,14 +42,17 @@ function App() {
   // }, []);
 
 
-const [isDark, setIsDark] = useState(true);
+ const { isDark, setIsDark } = useTheme();
 
   return (
     <main className="select-none" id="home">
-      <div className="dark:bg-[url('/assets/herobg.png')] bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center max-w-full">
+      {/* <div className="dark:bg-[url('/assets/herobg.png')] bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center transition duration-75 max-w-full"> */}
+     <div className="relative w-full h-full">
+        <div className={`absolute inset-0 bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
+        <div className={`absolute inset-0 bg-[url('/assets/herobg.png')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-100' : 'opacity-0'}`} />
         <div className="max-w-7xl mx-auto">
-          <Navbar isDark={isDark} setIsDark={setIsDark} />
-          <HeroSection />
+          <Navbar />
+          <HeroSection  isDark/>
         </div>
       </div>
 
