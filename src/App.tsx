@@ -44,7 +44,7 @@ function App() {
  const { isDark, setIsDark } = useTheme();
 
   return (
-    <main className="select-none" id="home">
+    <main className="select-none dark:bg-black" id="home">
       {/* <div className="dark:bg-[url('/assets/herobg.png')] bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center transition duration-75 max-w-full"> */}
      <div className="relative w-full h-full">
         <div className={`absolute inset-0 bg-[url('/assets/herobg-light.jpg')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
@@ -60,7 +60,9 @@ function App() {
         <Skills />
       </div>
 
-      <div className="bg-[url('/assets/herobg-flip.png')] bg-cover bg-center max-w-full">
+       <div className="relative w-full h-full">
+        <div className={`absolute inset-0 bg-[url('/assets/herobg-light-flip.jpg')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
+        <div className={`absolute inset-0 bg-[url('/assets/herobg.png')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-100' : 'opacity-0'}`} /> 
         <div className="max-w-7xl mx-auto">
           <Education />
         </div>

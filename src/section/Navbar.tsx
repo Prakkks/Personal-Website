@@ -24,11 +24,11 @@ const Navbar = () => {
 
   // Update root html class
   useEffect(() => {
-    const root = document.documentElement;
     if (isDark) {
-      root.classList.add("dark");
+      document.body.classList.add("dark");
     } else {
-      root.classList.remove("dark");
+      document.body.classList.remove("dark");
+
     }
   }, [isDark]);
 

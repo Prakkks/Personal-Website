@@ -17,12 +17,12 @@ const Education = () => {
   return (
     <section className="c-space my-10 sm:my-20" id="education">
         <div className="w-full text-white-600" >
-            <h3 className="head-text text-gray_gradient " > Education</h3>
-
+            <div className="head-text text-gray_gradient "> Education</div>
+            <h1 className="dark:text-white text-black z-50"> Education </h1>
            <div className="work-container">
               { isDesktop &&  <div className="work-canvas "  >
                     <Canvas  >
-                        <ambientLight intensity={0.5} />
+                        <ambientLight intensity={0.5} position={[0,0,5]} />
                         <spotLight position={[10,10,10]} angle={0.15} penumbra={1}/>
                         <directionalLight position={[10,10,10]} intensity={1}/>
                         <OrbitControls  enableZoom={false} maxPolarAngle={Math.PI/2} />
@@ -45,9 +45,9 @@ const Education = () => {
                                     <div className="work-content_bar" />
                                  </div>   
                                 <div className="sm:p-5 p-2.5 py-5">
-                                <p className="font-bold text-white-800">{item.name}</p>
-                                <p className="text-sm mb-2 sm:mb-5 ">{item.pos } -- {item.duration}</p>
-                                <p className="group-hover:text-white transition ease-in-out duration-500 sm:text-justify text-sm md:text-lg ">
+                                <p className="font-bold dark:text-white-800 text-black-500">{item.name}</p>
+                                <p className="text-sm mb-2 sm:mb-5 text-gray-500 ">{item.pos } -- {item.duration}</p>
+                                <p className="dark:group-hover:text-white group-hover:text-black transition ease-in-out duration-500 sm:text-justify text-sm md:text-[15px] ">
                                     {item.title}
                                 </p>
                                  </div>

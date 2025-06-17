@@ -14,7 +14,7 @@ const Skills = () => {
   </div>
 </div> */}
 
- <Marquee speed={50} gradient={false}  className="text-gray-300 ">
+ <Marquee speed={50} gradient={false}  className="dark:text-gray-300 text-gray-500 ">
     {
       skill_set.map((skill, index)=> (
         <div key={index} className="mx-6 font-semibold flex flex-row gap-2 items-center md:text-2xl "> <img src={skill.icon} className="md:w-15 md:h-15 w-10 h-10" /> {skill.name} </div>

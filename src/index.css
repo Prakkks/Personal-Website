@@ -13,9 +13,12 @@ html {
 }
 
 body {
-  background: #010103;
+  /* background: #010103; */
+   background: #ffffff; 
   font-family: 'General Sans', sans-serif;
 }
+
+
 
 @theme
 {
@@ -33,7 +36,7 @@ body {
   --color-white-500: #62646C;
 
   --color-primary-purple : #915eff;
-  --color-primary-dark-purple:`;
+  --color-primary-dark-purple: #321A7D;
   
   /* Example font family as CSS variable */
   --font-generalsans: 'General Sans', sans-serif;
@@ -50,6 +53,10 @@ body {
   .no-outline {
   @apply focus:outline-none;
 }
+
+ 
+
+
 
 
   .nav-ul {
@@ -69,7 +76,7 @@ body {
     @apply absolute left-0 right-0 dark:bg-black-200 bg-white backdrop-blur-sm  transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
   }
   .text-gray_gradient {
-    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+    @apply bg-black-500 bg-clip-text text-transparent;
   }
     .head-text {
     @apply sm:text-4xl text-2xl font-semibold ;
@@ -112,11 +119,16 @@ body {
   } */
 
   .tech-logo {
-    @apply w-10 h-10 rounded-md p-2 bg-neutral-100   backdrop-filter backdrop-blur-lg flex justify-center items-center;
+    @apply w-10 h-10 rounded-md p-2 dark:bg-neutral-100 dark:border-0 dark:shadow-black shadow-gray-300 shadow-md bg-white  backdrop-filter backdrop-blur-lg flex justify-center items-center;
   }
     /* clients section */
   .client-container {
     @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
+  }
+
+  .animatedText
+  {
+    @apply dark:text-white-500 text-gray-500 ;
   }
 
   .client-review {
@@ -129,7 +141,7 @@ body {
 
   /*  work experience section */
   .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12 z-10;
   }
 
   .work-canvas {
@@ -137,20 +149,20 @@ body {
   }
 
   .work-content {
-    @apply col-span-2 rounded-lg bg-black/40  ;
+    @apply col-span-2 rounded-lg dark:bg-black/40 bg-white/10 shadow-lg  ;
     /* @apply col-span-2 rounded-lg bg-black-200 border border-black-300 ; */
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer dark:hover:bg-black-300 hover:bg-white-700 rounded-lg sm:px-5 px-2.5;
   }
 
   .work-content_logo {
-    @apply rounded-4xl w-10 h-10 sm:w-16 sm:h-16 p-2 bg-white-800;
+    @apply rounded-4xl w-10 h-10 sm:w-16 sm:h-16 p-2 dark:bg-white-800 bg-white;
   }
 
   .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
+    @apply flex-1 w-0.5 mt-4 h-full dark:bg-black-300 bg-white dark:group-hover:bg-black-500 group-hover:bg-white-500 group-last:hidden;
   }
 
   /* contact section */
@@ -182,12 +194,33 @@ body {
   }
 
   .project-title{
-    @apply   p-4 border-b-2 hover:text-[#b292f7] shadow-md transition duration-300 ease-in-out  ;
+    @apply   p-4 border-b-2 dark:hover:text-[#b292f7] hover:text-blue-300  transition duration-300 ease-in-out  ;
   }
    
 }
 
-.arrow-gradient {
+ .arrow-gradient {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.000025) 50%,
+      rgba(255, 255, 255, 0.000025) 50%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+  }
+
+  .gradient-light {
+  background: linear-gradient(
+    to right,
+    rgba(57, 56, 56, 0.05),
+    rgba(255, 255, 255, 0.9),    
+    rgba(245, 245, 245, 0.8),
+    rgba(230, 230, 230, 0.7)
+  );
+
+}
+
+/* .arrow-gradient {
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.1) 10%,
@@ -195,7 +228,22 @@ body {
     rgba(255, 255, 255, 0.000025) 50%,
     rgba(255, 255, 255, 0.025) 100%
   );
-}
+} */
+
+
+/* .gradient-light {
+  background: linear-gradient(
+    to right,
+    rgba(57, 56, 56, 0.05),
+    rgba(255, 255, 255, 0.9),    
+    rgba(245, 245, 245, 0.8),
+    rgba(230, 230, 230, 0.7)
+  );
+
+} */
+
+
+
 
 .waving-hand {
   animation-name: wobble-z;
