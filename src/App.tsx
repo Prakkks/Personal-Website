@@ -11,34 +11,35 @@ import Navbar from "./section/Navbar";
 import Project from "./section/Project";
 import Skills from "./section/Skills";
 import { useTheme } from "./assets/themeprovider";
+import { useEffect } from "react";
 
 function App() {
-  // useEffect(() => {
-  //   const handleRightClick = (e:any) => e.preventDefault();
-  //   const handleCopy = (e:any) => {
-  //     e.preventDefault();
-  //     alert("Copying is disabled.");
-  //   };
-  //   const handleKeyDown = (e:any) => {
-  //     if (
-  //       (e.ctrlKey && (e.key === "c" || e.key === "u")) ||
-  //       e.key === "F12"
-  //     ) {
-  //       e.preventDefault();
-  //       alert("This shortcut is disabled.");
-  //     }
-  //   };
+  useEffect(() => {
+    const handleRightClick = (e:any) => e.preventDefault();
+    const handleCopy = (e:any) => {
+      e.preventDefault();
+      alert("Copying is disabled.");
+    };
+    const handleKeyDown = (e:any) => {
+      if (
+        (e.ctrlKey && (e.key === "c" || e.key === "u")) ||
+        e.key === "F12"
+      ) {
+        e.preventDefault();
+        alert("This shortcut is disabled.");
+      }
+    };
 
-  //   document.addEventListener("contextmenu", handleRightClick);
-  //   document.addEventListener("copy", handleCopy);
-  //   document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("contextmenu", handleRightClick);
+    document.addEventListener("copy", handleCopy);
+    document.addEventListener("keydown", handleKeyDown);
 
-  //   return () => {
-  //     document.removeEventListener("contextmenu", handleRightClick);
-  //     document.removeEventListener("copy", handleCopy);
-  //     document.removeEventListener("keydown", handleKeyDown);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("contextmenu", handleRightClick);
+      document.removeEventListener("copy", handleCopy);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
 
  const { isDark, setIsDark } = useTheme();

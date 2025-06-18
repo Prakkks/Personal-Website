@@ -11,7 +11,7 @@ const ProjectDemo = (props:any) => {
   const { actions } = useAnimations(animations, group);
   
 
-  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
+  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/calculator.mp4');
 
 
 
