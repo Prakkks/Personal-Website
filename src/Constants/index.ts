@@ -336,6 +336,7 @@ export const skill_set =[
     { name: 'MediaPipe', icon: '/assets/icons/mediapipe.webp' },
     { name: 'OpenCV', icon: 'assets/icons/opencv.png' },
     { name: 'Robotics', icon: '/assets/icons/robo.png' },
+    { name: 'Raspberry Pi', icon: '/assets/icons/pi.jpg' },
 
 ];
 

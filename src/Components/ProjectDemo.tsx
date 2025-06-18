@@ -1,5 +1,4 @@
 
-
 import { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
@@ -10,8 +9,11 @@ const ProjectDemo = (props:any) => {
   const group = useRef<Group>(null);
   const { nodes, materials, animations } = useGLTF('/models/computer.glb');
   const { actions } = useAnimations(animations, group);
+  
 
   const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
+
+
 
   useEffect(() => {
     if (txt) {
@@ -961,6 +963,7 @@ const ProjectDemo = (props:any) => {
             // receiveShadow
             geometry={nodes['Monitor-B-_computer_0_2'].geometry}
             material={materials.base__0}
+            visible={false}
           />
           <mesh
             name="Monitor-B-_computer_0_3"
