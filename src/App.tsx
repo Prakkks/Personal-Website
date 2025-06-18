@@ -60,10 +60,10 @@ function App() {
         <Skills />
       </div>
 
-       <div className="relative w-full h-full">
-        <div className={`absolute inset-0 bg-[url('/assets/herobg-light-flip.jpg')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-0' : 'opacity-100'}`} />
-        <div className={`absolute inset-0 bg-[url('/assets/herobg.png')] bg-cover bg-center transition-opacity duration-500 ${isDark ? 'opacity-100' : 'opacity-0'}`} /> 
-        <div className="max-w-7xl mx-auto">
+       {/* <div className="relative w-full h-full"> */}
+      <div className="dark:bg-[url('/assets/herobg-flip.png')] bg-[url('/assets/herobg-light-flip.jpg')] bg-cover bg-center transition duration-75 max-w-full">
+
+       <div className="max-w-7xl mx-auto">
           <Education />
         </div>
       </div>

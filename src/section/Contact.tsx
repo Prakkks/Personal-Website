@@ -1,5 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { useTheme } from "../assets/themeprovider";
 
 interface FormState {
   name: string;
@@ -8,6 +9,9 @@ interface FormState {
 }
 
 const Contact = () => {
+
+
+  const {isDark} = useTheme();
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState<FormState>({
@@ -54,13 +58,13 @@ const Contact = () => {
     <section className="c-space my-20" id="contact">
       <div className="relative min-h-screen flex items-center justify-center flex-col">
         <img
-          src="/assets/terminal.png"
+          src={ isDark ? "/assets/terminal.png": "/assets/terminal-light.png"}
           alt="terminal background"
           className="absolute inset-0 w-full min-h-screen object-cover"
         />
         <div className="contact-container relative z-10">
           <h3 className="head-text text-gray_gradient pt-4">Let's Talk</h3>
-          <p className="text-lg text-white-600 mt-3">
+          <p className="text-md sm:text-lg dark:text-white-600 text-gray-800 mt-3">
             I'm just getting started in my professional journey, and I'm excited to collaborate, learn, and grow. If you're looking for a passionate beginner or just want to chat, let's talk!
           </p>
 
@@ -109,7 +113,7 @@ const Contact = () => {
             </label>
 
             <button
-              className="field-btn hover:border-gray-600 hover:border-2 hover:shadow-neon"
+              className="field-btn dark:hover:border-gray-600 hover:border-gray-400 hover:border-2 hover:shadow-neon"
               type="submit"
               disabled={loading}
             >

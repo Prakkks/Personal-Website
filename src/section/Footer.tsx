@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <section className="c-space pt-7 pb-3 border-t border-black-300  items-center flex  flex-wrap gap-5 justify-between">
-        <div className="text-white-600 flex gap-5 ">
+        <div className="dark:text-white-600 text-gray-700 flex gap-5 ">
             <p> Terms & Conditions</p>
             <p> |</p>
             <p> Privacy Policy </p>
@@ -48,7 +48,7 @@ const Footer = () => {
   </a>
 </div>
 
-        <p className="text-white-500"> 2025 Prakriti. All rights reserved. </p>
+        <p className="dark:text-white-500 text-gray-700"> 2025 Prakriti. All rights reserved. </p>
     </section>
   )
 }

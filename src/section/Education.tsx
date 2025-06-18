@@ -18,7 +18,6 @@ const Education = () => {
     <section className="c-space my-10 sm:my-20" id="education">
         <div className="w-full text-white-600" >
             <div className="head-text text-gray_gradient "> Education</div>
-            <h1 className="dark:text-white text-black z-50"> Education </h1>
            <div className="work-container">
               { isDesktop &&  <div className="work-canvas "  >
                     <Canvas  >
