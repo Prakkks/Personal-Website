@@ -57,7 +57,7 @@ const HackerRoom = (props: any) => {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
   // Load textures (they may be undefined or null)
-  const monitorTexture = useTexture('/textures/desk/monitor.png');
+  // const monitorTexture = useTexture('/textures/desk/monitor.png');
   const screenTexture = useTexture('/textures/desk/screen.png');
 
   // Define fallback materials using useMemo (avoid recreating every render)

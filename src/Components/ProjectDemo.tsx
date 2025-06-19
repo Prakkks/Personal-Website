@@ -1,14 +1,14 @@
 
 import { useRef, useEffect } from 'react';
-import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
+import { useGLTF,  useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Group } from 'three';
+import { Group, Mesh } from 'three';
 
 const ProjectDemo = (props:any) => {
   const group = useRef<Group>(null);
-  const { nodes, materials, animations } = useGLTF('/models/computer.glb');
-  const { actions } = useAnimations(animations, group);
+  const { nodes, materials } = useGLTF('/models/computer.glb');
+  // const { actions } = useAnimations(animations, group);
   
 
   const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/calculator.mp4');
@@ -22,12 +22,14 @@ const ProjectDemo = (props:any) => {
   }, [txt]);
 
   useGSAP(() => {
-    gsap.from(group.current.rotation, {
-      y: Math.PI / 2,
-      duration: 1,
-      ease: 'power3.out',
-    });
-  }, [txt]);
+  if (!group.current) return;  // exit early if null
+
+  gsap.from(group.current.rotation, {
+    y: Math.PI / 2,
+    duration: 1,
+    ease: 'power3.out',
+  });
+}, [txt]);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -36,8 +38,8 @@ const ProjectDemo = (props:any) => {
           name="monitor-screen"
           // castShadow
           // receiveShadow
-          geometry={nodes['monitor-screen'].geometry}
-          material={nodes['monitor-screen'].material}
+          geometry={(nodes['monitor-screen']as Mesh).geometry}
+          material={(nodes['monitor-screen'] as Mesh).material}
           position={[0.127, 1.831, 0.511]}
           rotation={[1.571, -0.005, 0.031]}
           scale={[0.661, 0.608, 0.401]}>
@@ -954,14 +956,15 @@ const ProjectDemo = (props:any) => {
             name="Monitor-B-_computer_0_1"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_1'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_1'] as Mesh).geometry}
+            // geometry={nodes['Monitor-B-_computer_0_1'].geometry}
             material={materials.computer}
           />
           <mesh
             name="Monitor-B-_computer_0_2"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_2'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_2'] as Mesh).geometry}
             material={materials.base__0}
             visible={false}
           />
@@ -969,42 +972,42 @@ const ProjectDemo = (props:any) => {
             name="Monitor-B-_computer_0_3"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_3'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_3'] as Mesh).geometry}
             material={materials.Material_36}
           />
           <mesh
             name="Monitor-B-_computer_0_4"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_4'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_4'] as Mesh).geometry}
             material={materials.Material_35}
           />
           <mesh
             name="Monitor-B-_computer_0_5"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_5'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_5'] as Mesh).geometry}
             material={materials.Material_34}
           />
           <mesh
             name="Monitor-B-_computer_0_6"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_6'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_6']as Mesh).geometry}
             material={materials.keys}
           />
           <mesh
             name="Monitor-B-_computer_0_7"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_7'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_7']as Mesh).geometry}
             material={materials.keys2}
           />
           <mesh
             name="Monitor-B-_computer_0_8"
             // castShadow
             // receiveShadow
-            geometry={nodes['Monitor-B-_computer_0_8'].geometry}
+            geometry={(nodes['Monitor-B-_computer_0_8']as Mesh).geometry}
             material={materials.Material_37}
           />
         </group>
