@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
 import { Float, useGLTF, useTexture } from '@react-three/drei';
-import { Mesh, type Group } from 'three';
+import {  type Group } from 'three';
 
 const Cube = ({ ...props }) => {
   const { nodes, materials } = useGLTF('models/rounded_cube.glb');
