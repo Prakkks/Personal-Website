@@ -269,11 +269,11 @@ export const myProjects = [
   // },
   {
     category: 'Machine Learning',
-    title: 'Imaginify - AI Photo Manipulation App',
-    desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    subdesc:
-      'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
+    title: 'YOLOv5 Object Detection - Custom Model',
+  desc: 'A Python-based object detection project using YOLOv5, trained to accurately identify and classify ten different object categories.',
+  subdesc:
+    'Utilizes YOLOv5 architecture for real-time object detection. The project includes data preprocessing, model training, and evaluation to optimize detection accuracy.',
+  href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
     texture: '/textures/project/yolo.mp4',
     logo: '/assets/project-logo5.png',
     livesite: false,
@@ -286,24 +286,20 @@ export const myProjects = [
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'Yolo-v5',
+        path: '/assets/yolo.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Python',
+        path: 'assets/python.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'OpenCV',
+        path: '/assets/opencv.svg',
       },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
+     
     ],
   },
 ];
