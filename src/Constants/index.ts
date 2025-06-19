@@ -100,7 +100,7 @@ export const myProjects = [
   subdesc:
      'Inspired by real-world scientific calculators, SciCalc offers a layered interface for simple, advanced, and scientific modes — enhancing the learning experience, serving as a hands-on project to learn web technologies and backend integration.',
  href: 'https://github.com/Prakkks/Calculator-Web-App-',
-    texture: '/public/textures/project/calculator.mp4',
+    texture: '/textures/project/calculator.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
       backgroundColor: '#2A1816',
@@ -144,7 +144,7 @@ export const myProjects = [
     subdesc:
     'Showcases smooth animations, dark/light theme toggling, dynamic project data, and 3D model integration — all crafted to provide a professional first impression for visitors and potential employers.',
       href: 'https://github.com/Prakkks/Personal-Website',
-    texture: '/public/textures/project/websitepersonal.mp4',
+    texture: '/textures/project/websitepersonal.mp4',
     logo: '/assets/logo.png',
     logoStyle: {
       backgroundColor: '#e30b5d',
@@ -316,7 +316,7 @@ export const EducationHistory = [
     pos: ' Bachelor of Engineering in Electronics, Communication and Information',
     duration: '2020 - 2025',
     title: "Completed my undergraduate studies with a focus on software development, data structures, and emerging technologies like AI and web-based systems.",
-    icon: '/public/assets/keclogo.jpg',
+    icon: '/assets/keclogo.jpg',
     animation: 'Action-Salute',
   },
   {

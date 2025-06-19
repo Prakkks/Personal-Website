@@ -44,7 +44,7 @@ const isSmall = useMediaQuery({ maxWidth: 440 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet, isTab);
   return (
     <section className=" relative c-space w-full h-screen">
-        <div className={` px-6 absolute inset-0 top-[420] max-w-7xol my-20 mx-auto flex flex-row items-center gap-5 sm:items-start justify-center  ` }>
+        <div className={` px-6 absolute inset-0 top-[420px] max-w-7xol my-20 mx-auto flex flex-row items-center gap-5 sm:items-start justify-center  ` }>
             <div className='flex flex-col justify-center  items-center mt-5'>
                { <div className=' w-5 h-5 rounded-full bg-[#915eff]'  />}
                 <div className='w-1 sm:h-60 h-36 violet-gradient ' />
