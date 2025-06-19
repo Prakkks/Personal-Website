@@ -1,6 +1,6 @@
 
 import { useRef, useEffect } from 'react';
-import { useGLTF,  useVideoTexture } from '@react-three/drei';
+import { useGLTF, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Group, Mesh } from 'three';

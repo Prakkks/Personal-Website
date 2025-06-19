@@ -42,7 +42,7 @@ function App() {
   }, []);
 
 
- const { isDark, setIsDark } = useTheme();
+ const { isDark } = useTheme();
 
   return (
     <main className="select-none dark:bg-black" id="home">
