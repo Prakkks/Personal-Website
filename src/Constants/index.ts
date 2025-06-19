@@ -228,45 +228,50 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   category: 'Machine Learning',
-  //   title: 'Horizon - Online Banking Platform',
-  //   desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-  //   subdesc:
-  //     'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-  //   href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-  //   texture: '/textures/project/project4.mp4',
-  //   logo: '/assets/project-logo4.png',
-  //   logoStyle: {
-  //     backgroundColor: '#0E1F38',
-  //     border: '0.2px solid #0E2D58',
-  //     boxShadow: '0px 0px 60px 0px #2F67B64D',
-  //   },
-  //   livesite: false,
-  //   spotlight: '/assets/spotlight4.png',
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: 'React.js',
-  //       path: '/assets/react.svg',
-  //     },
-  //     {
-  //       id: 2,
-  //       name: 'TailwindCSS',
-  //       path: 'assets/tailwindcss.png',
-  //     },
-  //     {
-  //       id: 3,
-  //       name: 'TypeScript',
-  //       path: '/assets/typescript.png',
-  //     },
-  //     {
-  //       id: 4,
-  //       name: 'Framer Motion',
-  //       path: '/assets/framer.png',
-  //     },
-  //   ],
-  // },
+  {
+    category: 'Web Development',
+    title: 'PConvert - Image to Text Converter ',
+    desc: 'A  web application that extracts readable text from images using Optical Character Recognition (OCR) technology.',
+    subdesc:
+      'Leverages EasyOCR for accurate text extraction and offers a clean interface. Useful for digitizing printed documents, extracting text from scanned forms, receipts, handwritten notes, or screenshots — making it ideal for students, researchers, and professionals who frequently deal with images containing embedded text.',
+    href: 'https://github.com/Prakkks/Image-to-Text-Converter-using-Flask/',
+    texture: '/textures/project/textconvert.mp4',
+    logo: '/assets/project-logo2.png',
+    logoStyle: {
+      backgroundColor: '#0E1F38',
+      border: '0.2px solid #0E2D58',
+      boxShadow: '0px 0px 60px 0px #2F67B64D',
+    },
+    livesite: false,
+    spotlight: '/assets/spotlight4.png',
+    tags: [
+       {
+        id: 1,
+        name: 'HTML',
+        path: '/assets/html.svg',
+      },
+      {
+        id: 2,
+        name: 'CSS',
+        path: 'assets/css.svg',
+      },
+      {
+        id: 3,
+        name: 'JavaScript',
+        path: '/assets/js.svg',
+      },
+      {
+        id: 4,
+        name: 'Flask',
+        path: '/assets/flask.svg',
+      },
+       {
+        id: 5,
+        name: 'BootStrap',
+        path: '/assets/bootstrap.svg',
+      },
+    ],
+  },
   {
     category: 'Machine Learning',
     title: 'YOLOv5 Object Detection - Custom Model',
