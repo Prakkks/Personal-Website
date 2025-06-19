@@ -94,12 +94,12 @@ export const calculateSizes = (
 
 export const myProjects = [
   {
-    category: 'Web Development',
-    title: 'Calculator - Scientific Calculator',
-    desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-    subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+   category: 'Web Development',
+  title: 'SciCalc - Scientific Calculator Web App',
+  desc: 'A feature-rich web-based scientific calculator designed to perform basic arithmetic, complex trigonometric, and logarithmic functions.',
+  subdesc:
+     'Inspired by real-world scientific calculators, SciCalc offers a layered interface for simple, advanced, and scientific modes — enhancing the learning experience, serving as a hands-on project to learn web technologies and backend integration.',
+ href: 'https://github.com/Prakkks/Calculator-Web-App-',
     texture: '/public/textures/project/calculator.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
@@ -107,77 +107,85 @@ export const myProjects = [
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
+    livesite: false,
     spotlight: '/assets/spotlight1.png',
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'HTML',
+        path: '/assets/html.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'CSS',
+        path: 'assets/css.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'JavaScript',
+        path: '/assets/js.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Flask',
+        path: '/assets/flask.svg',
+      },
+       {
+        id: 5,
+        name: 'BootStrap',
+        path: '/assets/bootstrap.svg',
       },
     ],
   },
   {
     category: 'Web Development',
-    title: 'Personal Protfolio Website',
-    desc: 'LiveDoc is a powerful collaborative app that elevates the capabilities of real-time document editing. As an enhanced version of Google Docs, It supports millions of collaborators simultaneously, ensuring that every change is captured instantly and accurately.',
+    title: 'My Portfolio - Developer Showcase',
+    desc: 'A sleek and responsive personal portfolio website designed to highlight projects, skills, and experience in a modern and interactive format.',
     subdesc:
-      'With LiveDoc, users can experience the future of collaboration, where multiple contributors work together in real time without any lag, by using Next.js and Liveblocks newest features.',
-    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+    'Showcases smooth animations, dark/light theme toggling, dynamic project data, and 3D model integration — all crafted to provide a professional first impression for visitors and potential employers.',
+      href: 'https://github.com/Prakkks/Personal-Website',
     texture: '/public/textures/project/websitepersonal.mp4',
-    logo: '/assets/project-logo2.png',
+    logo: '/assets/logo.png',
     logoStyle: {
-      backgroundColor: '#13202F',
+      backgroundColor: '#e30b5d',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
+    livesite: false,
     spotlight: '/assets/spotlight2.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: '/assets/react.svg',
+        path: '/assets/reactjs.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: 'assets/tailwindcss.svg',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/typescript.png',
+        path: '/assets/ts.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Three JS',
+        path: '/assets/three.png',
       },
     ],
   },
   {
-    category: 'Web Development',
-    title: 'CarePulse - Health Management System',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
-    subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+  category: 'Machine Learning',
+  title: 'VTO - Virtual Try-On with Face Shape Detection',
+  // desc: 'An intelligent web application that helps users virtually try on eyewear while detecting their face shape to suggest the best fitting styles.',
+  desc: 'A research-driven web application that enhances online eyewear shopping using real-time virtual try-on and personalized face shape-based recommendations.',
+  subdesc:
+     'Integrates face detection, shape classification using MTCNN for face detection, VGG-16 for shape classification, and augmented reality overlays to simulate realistic try-on experiences — bridging the gap between digital and in-store shopping.',
+  href: '',
     texture: '/textures/project/vto.mp4',
-    logo: '/assets/project-logo3.png',
+    logo: '/assets/vto.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -186,76 +194,89 @@ export const myProjects = [
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
     spotlight: '/assets/spotlight3.png',
+    livesite: false,
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: 'TensorFlow',
+        path: '/assets/tensorflow.svg',
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: 'Python',
+        path: 'assets/python.svg',
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'JavaScript',
+        path: '/assets/js.svg',
       },
       {
         id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
+        name: 'Flask',
+        path: '/assets/flask.svg',
+      },
+       {
+        id: 5,
+        name: 'ThreeJS',
+        path: '/assets/three.png',
+      },
+        {
+        id: 6,
+        name: 'WebGL',
+        path: '/assets/webgl.svg',
       },
     ],
   },
+  // {
+  //   category: 'Machine Learning',
+  //   title: 'Horizon - Online Banking Platform',
+  //   desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+  //   subdesc:
+  //     'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+  //   href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+  //   texture: '/textures/project/project4.mp4',
+  //   logo: '/assets/project-logo4.png',
+  //   logoStyle: {
+  //     backgroundColor: '#0E1F38',
+  //     border: '0.2px solid #0E2D58',
+  //     boxShadow: '0px 0px 60px 0px #2F67B64D',
+  //   },
+  //   livesite: false,
+  //   spotlight: '/assets/spotlight4.png',
+  //   tags: [
+  //     {
+  //       id: 1,
+  //       name: 'React.js',
+  //       path: '/assets/react.svg',
+  //     },
+  //     {
+  //       id: 2,
+  //       name: 'TailwindCSS',
+  //       path: 'assets/tailwindcss.png',
+  //     },
+  //     {
+  //       id: 3,
+  //       name: 'TypeScript',
+  //       path: '/assets/typescript.png',
+  //     },
+  //     {
+  //       id: 4,
+  //       name: 'Framer Motion',
+  //       path: '/assets/framer.png',
+  //     },
+  //   ],
+  // },
   {
     category: 'Machine Learning',
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
-    },
-    spotlight: '/assets/spotlight4.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    category: 'Data Science',
     title: 'Imaginify - AI Photo Manipulation App',
     desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
     subdesc:
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    texture: '/textures/project/project5.mp4',
+    texture: '/textures/project/yolo.mp4',
     logo: '/assets/project-logo5.png',
+    livesite: false,
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',

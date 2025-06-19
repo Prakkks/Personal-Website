@@ -30,7 +30,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ currentProject, handleNav
         <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover" />
       </div>
       <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
-        <img src={currentProject.logo} alt="logo" className="sm:w-10 sm:h-10 w-6 h-6 shadow-sm" />
+        <img src={currentProject.logo} alt="logo" className="sm:w-10 sm:h-10 w-6 h-6 " />
       </div>
       <div className="flex flex-col gap-5 text-white-600 my-5">
         <p className="text-white sm:text-2xl font-semibold animatedText text-lg">{currentProject.title}</p>
@@ -40,13 +40,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ currentProject, handleNav
       <div className="flex items-center justify-between flex-wrap gap-5">
         <div className="flex items-center gap-6">
           {currentProject.tags.map((tag: any, index: number) => (
-            <div key={index} className="tech-logo">
+            <div key={index} className="tech-logo relative group" >
               <img src={tag.path} className="h-8 w-8" alt={tag.name} />
+              <span className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform bg-gray-800 text-white text-xs px-2 py-1 rounded shadow-md whitespace-nowrap z-10">
+      {tag.name}
+    </span>
             </div>
           ))}
         </div>
         <a className="flex items-center gap-2 cursor-pointer dark:text-white-600 text-gray-700" href={currentProject.href} target="_blank" rel="noreferrer">
-          <p>Check Live Site</p>
+           {currentProject.livesite ? 'Check Live Site' : 'View GitHub Repo'}
           <img src="assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
         </a>
       </div>
