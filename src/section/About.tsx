@@ -18,7 +18,7 @@ const About = () => {
        <div className="flex flex-col md:flex-row items-center sm:max-w-5xl gap-10 justify-between p-4 sm:p-8  mx-auto">
       {/* Image */}
         <img
-        src={ isDark? "/public/assets/pppicture1.png": "/public/assets/pppicture.png" } // Replace with your actual image path
+        src={ isDark? "/assets/pppicture1.png": "/assets/pppicture.png" } // Replace with your actual image path
         alt="Profile"
         className="rounded-xl w-60 sm:w-75 h-auto  "
       />
