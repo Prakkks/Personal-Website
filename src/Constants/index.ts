@@ -95,6 +95,90 @@ export const calculateSizes = (
 export const myProjects = [
   {
    category: 'Web Development',
+  title: 'Think3 -  3-Answer Challenge Game',
+  desc: 'A 60-second challenge game where players must guess 3 words based on a question — all answers are deeply connected to real-world knowledge and common sense.',
+  subdesc:
+     'THINK3 helped  understand the  workflow of a how to fetch and display dynamic data, handle timers, validate user inputs, and store responses in MongoDB. Animations with Framer Motion and clean React state handling made the experience smooth and enjoyable to build.',
+   href: 'https://github.com/Prakkks/THINK3/',
+    texture: '/textures/project/Think3.mp4',
+    logo: '/assets/think3.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    livesite: false,
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React',
+        path: '/assets/reactjs.svg',
+      },
+      {
+        id: 2,
+        name: 'Tailwind CSS',
+        path: 'assets/tailwindcss.svg',
+      },
+      {
+        id: 3,
+        name: 'Flask',
+        path: '/assets/flask.svg',
+      },
+      {
+        id: 4,
+        name: 'MongoDB',
+        path: '/assets/mongo.webp',
+      },
+       {
+        id: 5,
+        name: 'Framer Motion',
+        path: '/public/assets/framer.png',
+      },
+    ],
+  },
+  
+  {
+    category: 'Web Development',
+    title: 'My Portfolio - Developer Showcase',
+    desc: 'A sleek and responsive personal portfolio website designed to highlight projects, skills, and experience in a modern and interactive format.',
+    subdesc:
+    'Showcases smooth animations, dark/light theme toggling, dynamic project data, and 3D model integration — all crafted to provide a professional first impression for visitors and potential employers.',
+      href: 'https://github.com/Prakkks/Personal-Website',
+    texture: '/textures/project/websitepersonal.mp4',
+    logo: '/assets/logo.png',
+    logoStyle: {
+      backgroundColor: '#e30b5d',
+      border: '0.2px solid #17293E',
+      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+    },
+    livesite: false,
+    spotlight: '/assets/spotlight2.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/reactjs.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.svg',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/ts.svg',
+      },
+      {
+        id: 4,
+        name: 'Three JS',
+        path: '/assets/three.png',
+      },
+    ],
+  },
+  {
+   category: 'Web Development',
   title: 'SciCalc - Scientific Calculator Web App',
   desc: 'A feature-rich web-based scientific calculator designed to perform basic arithmetic, complex trigonometric, and logarithmic functions.',
   subdesc:
@@ -134,45 +218,6 @@ export const myProjects = [
         id: 5,
         name: 'BootStrap',
         path: '/assets/bootstrap.svg',
-      },
-    ],
-  },
-  {
-    category: 'Web Development',
-    title: 'My Portfolio - Developer Showcase',
-    desc: 'A sleek and responsive personal portfolio website designed to highlight projects, skills, and experience in a modern and interactive format.',
-    subdesc:
-    'Showcases smooth animations, dark/light theme toggling, dynamic project data, and 3D model integration — all crafted to provide a professional first impression for visitors and potential employers.',
-      href: 'https://github.com/Prakkks/Personal-Website',
-    texture: '/textures/project/websitepersonal.mp4',
-    logo: '/assets/logo.png',
-    logoStyle: {
-      backgroundColor: '#e30b5d',
-      border: '0.2px solid #17293E',
-      boxShadow: '0px 0px 60px 0px #2F6DB54D',
-    },
-    livesite: false,
-    spotlight: '/assets/spotlight2.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/reactjs.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.svg',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/ts.svg',
-      },
-      {
-        id: 4,
-        name: 'Three JS',
-        path: '/assets/three.png',
       },
     ],
   },

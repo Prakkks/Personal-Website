@@ -99,7 +99,7 @@ const ProjectCanvas: React.FC<ProjectCanvasProps> = ({ currentProject, isMobile,
 const Project = () => {
   const {isDark} = useTheme();
   const [show3D, setShow3D] = useState(false);
-  const [activecategory, setactivecategory] = useState("Machine Learning");
+  const [activecategory, setactivecategory] = useState("Web Development");
   const filteredProjects = myProjects.filter((project) => project.category === activecategory);
   const projectCategories = [...new Set(myProjects.map((project) => project.category))];
   const isTablet = useMediaQuery({ maxWidth: 1024, minWidth: 640 });
